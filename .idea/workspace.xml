@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96ecc250-40ec-454f-b7af-002ca0ccb0d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundler/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundler/webpack.common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/birthday_calculator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/background/fragment.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/background/vertex.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/shootingStar/fragment.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/shootingStar/vertex.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/stars/fragment.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/stars/vertex.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stars.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +24,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hedar/OneDrive/Dokumente/Bahar/IsItSterasBirthday",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hedar/OneDrive/Dokumente/Bahar/IsItSterasBirthday&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +42,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673689478374</updated>
       <workItem from="1673689479755" duration="71000" />
-      <workItem from="1673690395395" duration="48000" />
+      <workItem from="1673690395395" duration="89000" />
+      <workItem from="1673690675131" duration="135000" />
     </task>
     <servers />
   </component>

@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96ecc250-40ec-454f-b7af-002ca0ccb0d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IsItSterasBirthday.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/birthday_calculator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stars.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/background/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/background/vertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundler/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundler/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/birthday_calculator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/background/fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/background/vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/shootingStar/fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/shootingStar/vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/stars/fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/stars/vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stars.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hedar/OneDrive/Dokumente/Bahar/threejs-shooting-stars",
+    "last_opened_file_path": "C:/Users/hedar/OneDrive/Dokumente/Bahar/IsItSterasBirthday",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -50,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673689478374</updated>
       <workItem from="1673689479755" duration="71000" />
+      <workItem from="1673690395395" duration="48000" />
     </task>
     <servers />
   </component>

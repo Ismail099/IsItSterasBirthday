@@ -1,14 +1,18 @@
-import './style.css'
-import * as THREE from 'three'
+import * as THREE from 'three';
 
-import starsVertexShader from './shaders/stars/vertex.glsl'
-import starsFragmentShader from './shaders/stars/fragment.glsl'
+import './style.css';
+import './src/js/constants';
+import './src/js/shake';
 
-import backgroundVertexShader from './shaders/background/vertex.glsl'
-import backgroundFragmentShader from './shaders/background/fragment.glsl'
+import starsVertexShader from './shaders/stars/vertex.glsl';
+import starsFragmentShader from './shaders/stars/fragment.glsl';
 
-import shootingStarVertexShader from './shaders/shootingStar/vertex.glsl'
-import shootingStarFragmentShader from './shaders/shootingStar/fragment.glsl'
+import backgroundVertexShader from './shaders/background/vertex.glsl';
+import backgroundFragmentShader from './shaders/background/fragment.glsl';
+
+import shootingStarVertexShader from './shaders/shootingStar/vertex.glsl';
+import shootingStarFragmentShader from './shaders/shootingStar/fragment.glsl';
+import {Shake} from "./src/js/shake";
 
 /**
  * Base
@@ -58,72 +62,6 @@ const cursor = {
 }
 
 window.addEventListener('mousemove', handleOrientation);
-
-function requestDeviceMotionPermission() {
-    if (window.DeviceMotionEvent && DeviceMotionEvent.requestPermission) {
-        DeviceMotionEvent.requestPermission()
-            .then(() => {
-                window.addEventListener('devicemotion', handleOrientation, true);
-                window.addEventListener('deviceorientation', handleOrientation);
-            })
-    }
-    else if (window.DeviceOrientationEvent && DeviceOrientationEvent.requestPermission) {
-        DeviceOrientationEvent.requestPermission()
-            .then(() => {
-                window.addEventListener('devicemotion', handleOrientation, true);
-                window.addEventListener('deviceorientation', handleOrientation);
-            })
-    }
-}
-
-
-const askPermission = function () {
-    let alerted = localStorage.getItem('alerted') || '';
-
-    // feature detect
-
-    if (typeof DeviceOrientationEvent.requestPermission === "function") {
-        DeviceOrientationEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === "granted") {
-                    window.addEventListener("deviceorientation", handleOrientation);
-                } else {
-                    if (alerted !== 'yes') {
-                        window.alert("Device orientation permission not granted!");
-                        localStorage.setItem('alerted', 'yes');
-                    }
-                }
-            })
-            .catch(console.error);
-    } else {
-        requestDeviceMotionPermission();
-    }
-
-    if (typeof DeviceMotionEvent.requestPermission === 'function') {
-        DeviceMotionEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === "granted") {
-                    window.addEventListener("devicemotion", handleOrientation);
-                } else {
-                    if (alerted !== 'yes') {
-                        window.alert("Device motion permission not granted!");
-                        localStorage.setItem('alerted', 'yes');
-                    }
-                }
-            })
-            .catch(console.error);
-
-        }
-    else {
-        requestDeviceMotionPermission();
-    }
-};
-
-
-if (window.DeviceMotionEvent && DeviceMotionEvent.requestPermission) {
-    askPermission();
-}
-
 
 function handleOrientation(event) {
     cursor.x = (event.clientX / sizes.width - 0.5) * 0.15
@@ -394,5 +332,18 @@ const tick = () =>
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
-
 tick()
+
+
+
+const shake = new Shake({threshold: 15, timeout: 1000});
+
+shake.start().then(r =>
+    console.error(r)
+);
+shake.addEventListener('shake', () => {
+    shake.approve().then(r =>
+        console.error(r)
+    );
+    generateStars();
+});

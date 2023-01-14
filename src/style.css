@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    user-select: none;
+
+    transition: all 400ms ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+h1
+{
+    font-size: 4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    text-shadow: 0 0 0.5rem hsla(0, 100%, 100%, 0.5);
+}
+
+p
+{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+body {
+    background: #f6f6f6;
+    font-family: 'Monallesia Script', italic;
+    font-weight: 600;
+
+    zoom: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    background-color: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+body #container2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+@media screen and (max-width: 525px) {
+    body #container2 {
+        top: calc(50% - -25px);
+    }
+}
+
+
+body #container2 #countdown #cdDays,
+body #container2 #countdown #cdHours,
+body #container2 #countdown #cdMins,
+body #container2 #countdown #cdSecs {
+    display: inline-block;
+    width: 24%;
+    background-color: #c3c3c3;
+    font-family: 'Monallesia Script';
+}
+
+@media screen and (max-width: 767px) {
+
+    body #container2 #countdown #cdDays,
+    body #container2 #countdown #cdHours,
+    body #container2 #countdown #cdMins,
+    body #container2 #countdown #cdSecs {
+        width: 22%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+
+    body #container2 #countdown #cdDays,
+    body #container2 #countdown #cdHours,
+    body #container2 #countdown #cdMins,
+    body #container2 #countdown #cdSecs {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+
+    body #container2 #countdown #cdDays,
+    body #container2 #countdown #cdHours {
+        margin-bottom: 1%;
+    }
+}
+
+body #container2 #countdown .spacer {
+    position: relative;
+    content: '';
+    display: block;
+    height: 20px;
+    background: white;
+}
+
+body #container2 #countdown .spacer::before,
+body #container2 #countdown .spacer::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: darkgray;
+    border-radius: 50%;
+}
+
+body #container2 #countdown .label {
+    padding: 1.2rem 0;
+    opacity: 0.7;
+    font-family: 'Monallesia Script', italic;
+}
+
+@media screen and (max-width: 525px) {
+    body #container2 #countdown .label {
+        padding: 0.6rem 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body #container2 #countdown .label {
+        font-size: 4.5vw;
+    }
+}
+
+body #container2 #text {
+    color: #ffffff;
+    padding-bottom: 8rem;
+    font-size: 6vw;
+    font-family: 'Monallesia Script', italic;
+}
+
+@media screen and (max-width: 525px) {
+    body #container2 #countdown #text {
+        padding-top: 1.5rem;
+    }
+}
+
+@keyframes flame-flicker {
+
+    0%,
+    100% {
+        width: 16px;
+        height: 17px;
+    }
+
+    25% {
+        width: 19px;
+        height: 17px;
+    }
+
+    50% {
+        width: 17px;
+        height: 16px;
+    }
+
+    75% {
+        width: 17px;
+        height: 19px;
+    }
+}
+
+
+.container2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 70px;
+
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+
+.info {
+    font-size: 80px;
+}
+
+
+
+#notBirthdayTime {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 60px;
+}
+
+#birthdayTime {
+    display: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+#birthdayTime h3 {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    font-size: 150px;
+    color: white;
+    z-index: 1;
+}
+
+#unicornPicture {
+    position: absolute;
+    height: 100%;
+    top: 0%;
+}
+
+
+#container {
+    position: fixed;
+    touch-action: none;
+}
+
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+/* general styling */
+:root {
+    --smaller: .75;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #ffd54f;
+    display: flex;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.container {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: .125rem;
+    /* text-transform: uppercase; */
+    font-family: -apple-system, serif;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    font-family: -apple-system, serif;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
